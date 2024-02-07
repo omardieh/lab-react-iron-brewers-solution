@@ -1,7 +1,11 @@
 import axios from "axios";
 import { useState } from "react";
 
-export default function useBeerAPI({ endPoint, method, reqBody }) {
+export default function useBeerAPI({
+  endPoint = "/",
+  method = "GET",
+  reqBody = null,
+}) {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);

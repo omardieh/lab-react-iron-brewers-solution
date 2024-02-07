@@ -8,7 +8,6 @@ function BeerDetailsPage() {
   const { beerId } = useParams();
   const options = {
     endPoint: "/" + beerId,
-    method: "GET",
   };
 
   const { data: beer, error, loading, handleFetch } = useBeerAPI(options);
